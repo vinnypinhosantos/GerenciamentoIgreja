@@ -1,0 +1,39 @@
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://schemas.microsoft.com/dotnet/2021/maui/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="GerenciamentoIgreja.AdicionarPessoaPage">
+
+    <ScrollView>
+        <StackLayout Margin="100,0,100,0">
+
+            <Label Text="Adicionar Pessoa" FontSize="20" HorizontalOptions="Start" Margin="0,30,0,10" />
+            
+            <Entry x:Name="NomeEntry" Placeholder="Nome" Margin="0,0,0,30" />
+            <Entry x:Name="RuaEntry" Placeholder="Rua" Margin="0,0,0,30" />
+            <Entry x:Name="BairroEntry" Placeholder="Bairro" Margin="0,0,0,30" />
+            <Entry x:Name="CidadeEntry" Placeholder="Cidade" Margin="0,0,0,30" />
+            <Entry x:Name="EstadoEntry" Placeholder="Estado" Margin="0,0,0,30" />
+            <Entry x:Name="PaisEntry" Placeholder="País" Margin="0,0,0,30" />
+            <Label Text="Data de Nascimento" HorizontalOptions="Start" Margin="0,0,0,30" />
+            <DatePicker x:Name="DataNascDatePicker" Format="D" Margin="0,0,0,30"/>
+            <Picker x:Name="SexoPicker" Title="Sexo" SelectedIndex="0" Margin="0,0,0,30">
+                <Picker.Items>
+                    <x:String>Masculino</x:String>
+                    <x:String>Feminino</x:String>
+                </Picker.Items>
+            </Picker>
+            <Entry x:Name="EstadoCivilEntry" Placeholder="Estado Civil" Margin="0,0,0,30" />
+            <Entry x:Name="Telefone1Entry" Placeholder="Telefone 1" Keyboard="Telephone" Margin="0,0,0,30" />
+            <Entry x:Name="Telefone2Entry" Placeholder="Telefone 2" Keyboard="Telephone" Margin="0,0,0,30" />
+            <Entry x:Name="Telefone3Entry" Placeholder="Telefone 3" Keyboard="Telephone" Margin="0,0,0,30" />
+            <Picker x:Name="DepartamentoPicker" Title="Selecione o Departamento">
+                <!-- Itens do Picker serão carregados dinamicamente -->
+            </Picker>
+
+            <Button Text="Salvar" Clicked="SalvarButton_Clicked" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand" Margin="0,30,0,0" />
+        </StackLayout>
+    </ScrollView>
+
+</ContentPage>
